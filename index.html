@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="main-content">
+      <header>
+        <nav>
+          <div class="container">
+            <a href="/" class="brand">
+              <img src="./images/logo.png" alt="logo" />
+              <h2>QR Generator</h2>
+            </a>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <section class="qr-generator">
+          <div class="container">
+            <form>
+              <input
+                type="url"
+                name="url"
+                placeholder="type URL you need to generate QR code for it"
+              />
+              <select name="size">
+                <option value="200">Select Size</option>
+                <option value="100">Extra Small</option>
+                <option value="200">Small</option>
+                <option value="300">Medium</option>
+                <option value="500">Larg</option>
+                <option value="1500">Extra Larg</option>
+              </select>
+              <input type="submit" value="Generate" />
+            </form>
+          </div>
+        </section>
+        <section class="qr-image">
+          <div class="container">
+            <div class="image-container">
+              <h2>QR Code</h2>
+              <div id="qr-code" class="image">
+                <p>
+                  Enter the URL you want to code as a QR code and click generate
+                  button, then your QR code image will appear here
+                </p>
+              </div>
+              <a class="disabled" download="qr-code">Download</a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <div class="container">
+          <p>
+            <span>&copy;</span>
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            <span>Made by:</span>
+            <a href="https://alialhussein.ml" target="_blank">Ali Alhussein</a>
+          </p>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
